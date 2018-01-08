@@ -19,4 +19,5 @@ class ArrayStack:
     else:
         return self._data.pop();
 
-
+ def getitem(self):
+     return self._data;

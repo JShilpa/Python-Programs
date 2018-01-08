@@ -1,6 +1,6 @@
 #Python Program for implementation of matching delimiters in a string
 
-from array_stack import ArrayStack
+from arraystack import ArrayStack
 
 k = ArrayStack();
 leftstring = '{([';
