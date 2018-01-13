@@ -1,4 +1,5 @@
-#
+#Python program for implementing insertion sort
+
 def insertion_sort(a):
     for i in range(1,len(a)):
 
