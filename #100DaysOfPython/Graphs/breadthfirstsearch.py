@@ -4,7 +4,7 @@ from collections import defaultdict
 
 class BreadthFirstSearch:
 
-        def __init__(self):
+    def __init__(self):
         self.graph = defaultdict(list)
 
     def addEdge(self, node, edge):
