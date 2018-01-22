@@ -1,8 +1,6 @@
 # Python program for implementing anagram check
 
-
 def checkForAnagram(str1, str2):
-
     str1_list = list(str1.replace(" ", "").lower())
     str2_list = list(str2.replace(" ",'').lower())
 
@@ -20,6 +18,8 @@ def checkForAnagram(str1, str2):
         print("Is an Anagram")
     else:
         print("Not an Anagram")
+
+    
 
 
 checkForAnagram('William Shakespeare', 'I am a weakish speller')
