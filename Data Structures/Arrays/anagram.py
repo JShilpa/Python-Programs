@@ -19,7 +19,7 @@ def checkForAnagram(str1, str2):
     else:
         print("Not an Anagram")
 
-    
+
 
 
 checkForAnagram('William Shakespeare', 'I am a weakish speller')
