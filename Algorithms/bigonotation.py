@@ -32,29 +32,42 @@ class BigONotation:
                 found = True
                 index_val = index_val + str(i) + ' '
         end_time = int(round(time.time() * 1000))
-        print("Value found " + str(found))
-        print("Time taken " + str(end_time - start_time))
+        print("Value found: " + str(found))
+        print("Time taken to search for element " + str(end_time - start_time))
 
 
-    def bubble_sort(self, data):
+    # O(n ^ 2) : An algorithm who time to complete is directly proportional to square of amount of data.
+    # Each pass to outer loop O(n) requires to go through entire list through inner loop.
+    # Nested for-loops are example of quadratic time as we run a linear operation within other linear operation
+
+    def bubble_sort(self):
+        start_time = int(round(time.time() * 1000))
+        data = self.data
         for i in range(len(data)):
             for j in range(len(data)-i-1):
-                if data[j] > data[ j + 1]:
-                    temp = data[j]
-                    data[j] = data[j + 1]
-                    data[j + 1] = temp
+                if data[j] > data[j + 1]:
+                    data[j], data[j+ 1] = data[j + 1], data[j]
+
+
+        end_time = int(round(time.time() * 1000))
+        print("Time taken for Bubble Sort " + str(end_time - start_time))
         print(data)
 
 
 
 if __name__ == '__main__':
-    big_o = BigONotation(100000)
-    big_o.generate_random_no()
-    #print(big_o.get_array_value())
-    big_o.linear_search_el(20)
+    big_o = BigONotation(2000)
+    big_o1 = BigONotation(4000)
 
-    big_o1 = BigONotation(200000)
+    #  O(n) Test
+    big_o.generate_random_no()
+    big_o.linear_search_el(20)
     big_o1.generate_random_no()
     big_o1.linear_search_el(20)
-    big_o1.bubble_sort([5,2,10,1,7, 3])
+
+    # O(n ^ 2) Test
+    big_o.bubble_sort()
+    big_o1.bubble_sort()
+
+
 

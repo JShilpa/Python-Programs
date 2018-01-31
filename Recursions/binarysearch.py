@@ -1,6 +1,6 @@
 # Python program to implement binary search on sorted array list using Recursion
 
-def binarySearch(data, target, low=0, high=None):
+def binary_search(data, target, low = 0, high = None):
     if high is None:
         high = len(data)-1
     if low > high :
@@ -10,9 +10,9 @@ def binarySearch(data, target, low=0, high=None):
         if data[mid] == target:
             return True
         elif data[mid] > target:
-           return binarySearch(data, target, low, mid-1)
+           return binary_search(data, target, low, mid-1)
         else:
-            return binarySearch(data,target, mid+1, high)
+            return binary_search(data,target, mid+1, high)
 
-elementFound = binarySearch([2,10, 14, 16, 20, 22, 90, 100], 100, 0, 7)
-print(elementFound)
+element_found = binary_search([2,10, 14, 16, 20, 22, 90, 100], 100, 0, 7)
+print(element_found)
