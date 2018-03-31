@@ -1,2 +1,2 @@
 # Python-Programs
-Collection of my Python programs on Data Structures, Algorithms and Hacker Rank Challenges
+Collection of my Python programs on Basics, Data Structures and Algorithms 
